@@ -1,8 +1,8 @@
-import { ContactUs } from '../components/ui/ContactUs';
+import { ContactUs } from "../components/ui/ContactUs";
 
 function App() {
   return (
-    <div className="flex items-center justify-center w-screen h-screen">
+    <div className="flex h-screen w-screen items-center justify-center bg-gradient-to-r from-[#fbc2eb] to-[#a6c1ee] font-primary">
       <ContactUs />
     </div>
   );
