@@ -40,7 +40,7 @@ export const ContactUs = () => {
 
   return (
     <div className="max-w-1/2 flex h-full w-1/2 min-w-full flex-col items-center justify-center rounded-md bg-white p-5 shadow-lg sm:h-[90%] sm:min-w-min xl:w-[1000px] xl:flex-row">
-      <div className="hidden max-h-full w-auto items-center justify-center  xl:flex xl:w-1/2">
+      <div className="hidden max-h-full w-auto items-center justify-center xl:flex xl:w-1/2">
         <img
           src="contact.svg"
           alt=""
