@@ -39,7 +39,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-[#FEF6FC] sm:rounded-xl sm:p-5 sm:shadow-lg lg:flex-row xl:w-[1000px]">
+    <div className="flex flex-col items-center justify-center bg-[#FEF6FC] duration-700 animate-in fade-in zoom-in sm:rounded-xl sm:p-5 sm:shadow-lg lg:flex-row xl:w-[1000px]">
       <img
         src="contact.svg"
         alt="Illustrated image of a woman holding an envelope. A mobile and a phone is in the background."
