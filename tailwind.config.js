@@ -20,6 +20,9 @@ module.exports = {
       fontFamily: {
         primary: ["Inter", "sans-serif"],
       },
+      dropShadow: {
+        red: "0px 20px 20px rgba(228, 0, 70, 0.10)",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -33,11 +36,17 @@ module.exports = {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translate(0)" },
         },
+        "slide-in-right": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translate(100px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "slide-in-left": "0.8s ease-out 0s 1 slide-in-left",
+        "slide-in-right":
+          "slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
       },
     },
   },

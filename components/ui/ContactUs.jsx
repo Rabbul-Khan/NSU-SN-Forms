@@ -12,9 +12,12 @@ import {
 } from "./card";
 import { Button } from "./button";
 import { toast } from "sonner";
+import { ModeToggle } from "@/components/ui/mode-toggle";
+import { useTheme } from "@/components/ui/theme-provider";
 
 export const ContactUs = () => {
   const form = useRef();
+  const { context } = useTheme();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -39,19 +42,23 @@ export const ContactUs = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-[#FEF6FC] duration-700 animate-in fade-in zoom-in sm:rounded-xl sm:p-5 sm:shadow-lg lg:flex-row xl:w-[1000px]">
+    <div className="sm:drop-shadow-red flex min-h-full min-w-full flex-col items-center justify-center gap-10 bg-[#E40046] py-10 duration-700 animate-in fade-in zoom-in dark:bg-[#222222] dark:drop-shadow-lg sm:min-w-[475px] sm:rounded-xl sm:p-5 sm:shadow-lg md:min-w-[550px] lg:min-w-[850px] lg:flex-row xl:w-[1000px]">
+      <ModeToggle />
+
       <img
-        src="contact.svg"
+        src="Logo.svg"
         alt="Illustrated image of a woman holding an envelope. A mobile and a phone is in the background."
-        className="max-w-80 sm:pt-5 md:max-w-96 lg:pt-0 xl:max-w-[28rem]"
+        className="max-w-80 sm:pt-5 md:max-w-96 lg:pl-5 lg:pt-0 xl:max-w-[28rem]"
       />
 
-      <Card>
+      <Card className="min-w-full  grow dark:bg-[#272727] dark:drop-shadow-lg lg:min-w-fit">
         <CardHeader>
-          <CardTitle className="text-3xl lg:text-4xl">Get in Touch!</CardTitle>
-          <CardDescription className="text-sm lg:text-base">
+          <CardTitle className=" text-3xl text-[#E40046] dark:text-[#E40046] lg:text-5xl">
+            Get in Touch!
+          </CardTitle>
+          {/* <CardDescription className="text-sm text-[#1D1B1B] lg:text-base">
             Feel free to reach out to us using the form below
-          </CardDescription>
+          </CardDescription> */}
         </CardHeader>
 
         <CardContent>
@@ -59,7 +66,7 @@ export const ContactUs = () => {
             ref={form}
             onSubmit={sendEmail}
             id="contactForm"
-            className="grid w-full items-center gap-5"
+            className="grid items-center w-full gap-5 "
           >
             <div className="grid gap-2">
               <Label>Name</Label>
@@ -68,6 +75,7 @@ export const ContactUs = () => {
                 type="text"
                 name="user_name"
                 placeholder="John Doe"
+                className=""
               />
             </div>
 
@@ -103,7 +111,7 @@ export const ContactUs = () => {
 
             <Button
               type="submit"
-              className="relative ml-auto mt-5 h-[50px] w-full overflow-hidden bg-[#fbc2eb] text-base text-[#333333] shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-[#a6c1ee] before:duration-700 before:ease-out hover:scale-105 hover:shadow-[#a6c1ee] hover:before:h-96 hover:before:w-96 active:scale-95 lg:w-44  lg:hover:before:h-56 lg:hover:before:w-56"
+              className="relative mr-auto mt-5 h-[50px] w-full overflow-hidden border-2 bg-[#fff] text-base text-[#E40046] shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-[#E40046] before:duration-700 before:ease-out hover:scale-105 hover:text-[white] hover:shadow-[#E40046] hover:before:h-96 hover:before:w-96 active:scale-95 dark:bg-[#E40046]  dark:text-white dark:before:bg-[#ffffff] dark:hover:text-[#E40046] dark:hover:shadow-lg lg:w-44 lg:hover:before:h-56 lg:hover:before:w-56"
             >
               <span className="relative z-10">Send Message</span>
             </Button>
