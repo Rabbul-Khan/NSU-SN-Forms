@@ -124,7 +124,7 @@ export const ContactUs = () => {
 
             <Button
               type="submit"
-              className="text-primary before:bg-primary hover:shadow-[primary dark:bg-primary dark:hover:text-[primary group relative mr-auto mt-5 h-[50px] w-full overflow-hidden border-2 bg-white text-base shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:duration-700 before:ease-out hover:scale-105 hover:text-[white] hover:before:h-[35rem]  hover:before:w-[35rem] active:scale-95 dark:text-white dark:before:bg-white dark:hover:shadow-lg lg:w-44 lg:hover:before:h-56 lg:hover:before:w-56"
+              className="text-primary before:bg-primary hover:shadow-[primary dark:bg-primary dark:hover:text-[primary dark:hover:text-primary group relative mr-auto mt-5 h-[50px] w-full overflow-hidden border-2 bg-white text-base shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:duration-700 before:ease-out hover:scale-105 hover:text-[white]  hover:before:h-[35rem] hover:before:w-[35rem] active:scale-95 dark:text-white dark:before:bg-white dark:hover:shadow-lg lg:w-44 lg:hover:before:h-56 lg:hover:before:w-56"
             >
               <span className="relative z-10">Send Message</span>
 
